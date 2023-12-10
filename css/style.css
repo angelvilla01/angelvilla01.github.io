@@ -806,7 +806,7 @@ a:focus {
 
 /*******************************/
 /******** Portfolio CSS ********/
-/*******************************/
+/********************
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
@@ -909,98 +909,47 @@ a:focus {
     box-shadow: inset 0 0 0 0 #EF233C;
     border-color: #EF233C;
 }
+***********/
 
-
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.testimonial .container {
-    max-width: 900px;
-}
-
-.testimonial .testimonial-icon {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.testimonial .testimonial-icon i {
-    font-size: 60px;
-    color: rgba(256, 256, 256, .5);
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.testimonial .testimonial-img {
-    position: relative;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.testimonial .testimonial-item img {
+/* Estilos para el carrusel */
+#portfolioCarousel {
+    width: 70%;
     margin: 0 auto;
-    width: 120px;
-    padding: 10px;
-    border: 5px dotted #ffffff;
-    border-radius: 100px;
 }
 
-.testimonial .testimonial-text {
-    position: relative;
-    margin-top: -70px;
-    padding: 65px 35px 30px 35px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 500px;
+/* Estilos para las imágenes dentro del carrusel */
+#portfolioCarousel img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-.testimonial .testimonial-item p {
-    font-size: 18px;
-    font-style: italic;
+/* Estilos para los elementos del portafolio dentro del carrusel */
+.portfolio-item {
+    margin: 0 15px;
+    background-color: #fff; /* Fondo blanco */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.testimonial .testimonial-text h3 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.portfolio-item h3 {
+    color: #333; /* Texto negro */
 }
 
-.testimonial .testimonial-text h4 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 0;
+/* Estilos para el botón de descripción */
+.btn {
+    background-color: #3498db;
+    color: #050404;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
+.btn:hover {
+    background-color: #2980b9;
 }
 
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
-}
 
-.testimonial .owl-dot.active {
-    background: #ffffff;
-}
 
 
 /*******************************/
@@ -1086,81 +1035,65 @@ a:focus {
     }
 }
 
-
-/*******************************/
-/*********** Blog CSS **********/
-/*******************************/
-.blog {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
+/*dsafkajsdñfljsañdkjfñsadlf*/
+.conocimiento-item {
+    text-align: center;
 }
 
-.blog .blog-item {
-    position: relative;
+.conocimiento-item img {
+    max-width: 50px; /* Establece el ancho máximo a 50px */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción original */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* Estilos para el menú de filtrado */
+#conocimientos-filter {
+    list-style: none;
+    padding: 0;
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.blog .blog-img {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+#conocimientos-filter li {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.blog .blog-img img {
-    width: 100%;
-    transition: .5s;
+#conocimientos-filter li:hover,
+#conocimientos-filter li.filter-active {
+    background-color: #EF233C;
+    color: #fff;
 }
 
-.blog .blog-item:hover img {
+/* Estilos para los elementos de conocimiento */
+.conocimiento-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.conocimiento-item img {
+    max-width: 50px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+    transition: transform 0.3s ease;
+}
+
+.conocimiento-item:hover img {
     transform: scale(1.1);
 }
 
-.blog .blog-text {
-    position: relative;
-    padding: 30px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    border-left: 1px solid rgba(0, 0, 0, .07);
-}
 
-.blog .blog-text h2 {
-    font-size: 25px;
-    font-weight: 600;
-}
 
-.blog .blog-text p {
-    margin-bottom: 10px;
-}
+/*******************************/
 
-.blog .blog-item a.btn {
-    margin-top: 10px;
-    padding: 8px 15px;
-}
 
-.blog .blog-item a.btn i {
-    margin-left: 5px;
-}
-
-.blog .blog-meta {
-    position: relative;
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.blog .blog-meta p {
-    margin: 0 10px 0 0;
-    font-size: 13px;
-}
-
-.blog .blog-meta i {
-    color: #414141;
-    margin-right: 5px;
-}
-
-.blog .blog-meta p:last-child {
-    margin: 0;
-}
 
 
 /*******************************/

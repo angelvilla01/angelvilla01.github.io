@@ -78,18 +78,7 @@
     }, {offset: '80%'});
 
 
-    // Testimonials carousel
-    $(".testimonials-carousel").owlCarousel({
-        center: true,
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            }
-        }
-    });
+  
     
     
     
@@ -99,11 +88,49 @@
         layoutMode: 'fitRows'
     });
 
-    $('#portfolio-filter li').on('click', function () {
-        $("#portfolio-filter li").removeClass('filter-active');
-        $(this).addClass('filter-active');
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+  
+
+   
+     //Conocimientos filter
+
+
+    $(document).ready(function () {
+        $('#conocimientos-filter li').on('click', function () {
+            // Remueve la clase 'filter-active' de todos los elementos del filtro
+            $('#conocimientos-filter li').removeClass('filter-active');
+            // Agrega la clase 'filter-active' al elemento seleccionado
+            $(this).addClass('filter-active');
+
+            // Obtiene el valor de 'data-filter' del elemento seleccionado
+            var filterValue = $(this).attr('data-filter');
+
+            // Muestra u oculta los elementos según el filtro seleccionado
+            if (filterValue === '*') {
+                $('.conocimiento-item').show();
+            } else {
+                $('.conocimiento-item').hide();
+                $(filterValue).show();
+            }
+        });
+
+
+        $('#btnPokemonGo').on('click', function () {
+            var data = document.querySelector('#btnPokemonGo');
+            $('#modalGenerico').find('.modal-title').text(data.dataset.title);
+            $('#modalGenerico').find('.modal-body').text(data.dataset.description);
+             $('#modalGenerico').modal('show');
+         });
+
+         $('#btnGps').on('click', function () {
+            var data = document.querySelector('#btnGps');
+            $('#modalGenerico').find('.modal-title').text(data.dataset.title);
+            $('#modalGenerico').find('.modal-body').text(data.dataset.description);
+             $('#modalGenerico').modal('show');
+         });
+           
     });
+
+
     
 })(jQuery);
 
