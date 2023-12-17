@@ -1,0 +1,6 @@
+Sitemap: https://angelvilla01.github.io/sitemap.xml
+
+User-Agent: *
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
