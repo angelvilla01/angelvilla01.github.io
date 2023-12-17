@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    <title> 404 Error</title>
+        .container {
+            text-align: center;
+        }
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        h1 {
+            color: #333;
+            font-size: 10em;
+            margin: 0;
+        }
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+        p {
+            color: #555;
+            font-size: 1.5em;
+        }
 
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
-<body class="gray-bg">
-
-
-    <div class="middle-box text-center animated fadeInDown">
+<body>
+    <div class="container">
         <h1>404</h1>
-        <h3 class="font-bold">Page Not Found</h3>
-
-        <div class="error-desc">
-            Lo sentimos, pero no se ha encontrado la página que estás buscando. Intente verificar si hay errores en la URL y luego presione el botón Actualizar en su navegador o intente encontrar otra cosa en nuestra aplicación.
-            <form class="form-inline m-t" role="form">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search for page">
-                </div>
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
-        </div>
+        <p>Lo sentimos, la página que estás buscando no se encuentra.</p>
+        <p><a href="/">Volver a la página de inicio</a></p>
     </div>
-
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
