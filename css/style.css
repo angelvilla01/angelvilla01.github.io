@@ -419,6 +419,12 @@ a:focus {
     position: relative;
     margin-bottom: 45px;
 }
+.logo-av {
+    color: #EF233C;
+    font-size: larger;
+    width: 200px;
+    height: 150px;
+}
 
 .section-header p {
     display: inline-block;
@@ -805,9 +811,7 @@ a:focus {
 }
 
 
-/*******************************/
-/******** Portfolio CSS ********/
-/********************
+
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
@@ -910,131 +914,158 @@ a:focus {
     box-shadow: inset 0 0 0 0 #EF233C;
     border-color: #EF233C;
 }
-***********/
 
-/* Estilos para el carrusel */
-#portfolioCarousel {
-    width: 70%;
-    margin: 0 auto;
-}
 
-/* Estilos para las imágenes dentro del carrusel */
-#portfolioCarousel img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* Estilos para los elementos del portafolio dentro del carrusel */
-.portfolio-item {
-    margin: 0 15px;
-    background-color: #fff; /* Fondo blanco */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.portfolio-item h3 {
-    color: #333; /* Texto negro */
-}
-
-/* Estilos para el botón de descripción */
-.btn {
-    background-color: #3498db;
-    color: #050404;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
 
 
 
 
 /*******************************/
 /********* Contact CSS *********/
-/*******************************/
-.contact {
-    position: relative;
+
+.contact .contact-content .column {
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho disponible */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.contact .contact-content .left {
+    display: flex; /* Agregado para utilizar flexbox */
+    flex-direction: column; /* Para apilar elementos verticalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.right form {
+    width: 70%; /* Ajustar el ancho del formulario según sea necesario */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+
+
+
+.contact .max-width .contact-content .column #cv {
+    display: inline-block;
+    background: var(--colorPrincipal);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--colorPrincipal);
+    transition: all 0.3s ease;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+ #telefono {
+    color: var(--colorSecundario);
+    text-decoration: underline;
+}
+
+#telefono:hover {
+    color: var(--colorPrincipal);
+}
+
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: var(--colorPrincipal);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
     width: 100%;
-    margin: 45px 0;
-    background: #EF233C;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: var(--colorPrincipal);
+  border: 2px solid var(--colorPrincipal);
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: var(--colorPrincipal);
+  background: none;
+} 
+
+
+/*CSS iframe*/
+
+iframe {
+    border: 1px solid black;
+    width: 80%; /* Establece el ancho del iframe al 80% del contenedor padre */
+    margin: 0 auto; /* Centra el iframe horizontalmente */
+    display: block; /* Evita que haya espacio adicional debajo del iframe */
+    right: 500px;;
 }
 
-.contact .container-fluid {
-    background: url(../img/contact.jpg) left center no-repeat;
-    background-size: contain;
-}
-
-.contact .contact-form {
-    position: relative;
-    padding: 90px 0 90px 45px;
-    background: #EF233C;
-}
-
-.contact .contact-form input {
-    color: #ffffff;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
-.contact .contact-form textarea {
-    color: #ffffff;
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
-.contact .contact-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
-}
-
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
-}
-
-.contact .contact-form .btn {
-    margin-top: 35px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.contact .contact-form .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
-}
-
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-style: italic;
-    color: #ffffff;
-}
-
-@media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: none;
-    }
-    
-    .contact .contact-form {
-        padding: 90px 0;
-    }
-}
+  
 
 /*dsafkajsdñfljsañdkjfñsadlf*/
 .conocimiento-item {
@@ -1092,10 +1123,48 @@ a:focus {
 
 
 
-/*******************************/
 
+/* Estilos para el contenedor-grid */
+.contenedor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
+/* Estilos para los elementos dentro de contenedor-grid */
+.contenedor-grid .grid-item {
+    flex-direction: center; /* Esto probablemente debería ser column para que tenga sentido */
+    justify-content: center;
+    align-items: center;
+    background: #EF233C; 
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid var(--colorPrincipal);
+    transition: all 0.3s ease;
+    padding: 20px; /* Añade un espacio interno para mejorar la apariencia */
+    position: relative;
+}
 
+/* Estilos para la imagen dentro de grid-item */
+.contenedor-grid .grid-item img {
+    height: 30px;
+}
+
+/* Estilos para el nombre */
+.contenedor-grid .grid-item span {
+    display: block;
+    margin-top: 10px; /* Ajusta según sea necesario para centrar verticalmente */
+}
+
+/* Estilo para hover */
+.contenedor-grid .grid-item:hover {
+    background: #fff;
+    color: var(--colorPrincipal);
+}
 
 /*******************************/
 /********* Footer CSS **********/
